@@ -50,14 +50,7 @@ const page = ({ params }) => {
           <div className="text-[20px] font-semibold">Rs. 12599</div>
           <div className="text-[12px]">Inclusive of all taxes</div>
           <div className="text-[13px] mt-[25px] mb-[15px]">
-            have made over 1,100 professional career appearances, and has scored
-            over 800 official senior career goals for club and country, making
-            him the highest goalscorer of all time. Ronaldo began his senior
-            career with Sporting CP, before signing with Manchester United in
-            2003, winning the FA Cup in his first season. He would also go on to
-            win three consecutive Premier League titles, the Champions League
-            and the FIFA Club World Cup; at age 23, he won his first Ballon
-            d'Or.
+           lorem2022222222222222222222222222222222222222222222222222222222222222222222
           </div>
           
           <div className="flex flex-col r">

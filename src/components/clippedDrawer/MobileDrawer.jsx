@@ -31,11 +31,31 @@ const bottomicons = [
    
 ]
 const menuicons = [
-<ImMan className='text-[30px] text-[black]'/>,
-<ImWoman className='text-[30px] text-[black]' />,
-<MdChildFriendly className='text-[30px] text-[black]'/>,
-<AiOutlineLaptop className='text-[30px] text-[black]'/>,
-<MdOutlineSoupKitchen className='text-[30px] text-[black]'/>]
+  {
+    icon : <ImMan className='text-[30px] text-[black]'/>,
+    text : "Men",
+    routeUrl : '/men'
+  },
+  {
+    icon : <ImWoman className='text-[30px] text-[black]'/>,
+    text : "Women",
+    routeUrl : '/women'
+  },
+  {
+    icon : <MdChildFriendly className='text-[30px] text-[black]'/>,
+    text : "Children",
+    routeUrl : '/children'
+  },
+  {
+    icon : <AiOutlineLaptop className='text-[30px] text-[black]'/>,
+    text : "Electronics",
+    routeUrl : '/electronics'
+  },
+  {
+    icon : <MdOutlineSoupKitchen className='text-[30px] text-[black]'/>,
+    text : "Kitchen",
+    routeUrl : '/kitchen'
+  }]
 export default function MobileDrawer() {
   const [state, setState] = React.useState({
     left: false,
@@ -59,22 +79,19 @@ export default function MobileDrawer() {
       flexDirection:"column",
       justifyContent:"space-between"
 
-    }}
-    
+    }}    
     role="presentation"
-
-      
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Men', 'Women', 'Kids', 'Electronics',"Kitchen"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {menuicons.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {menuicons[index]}
+                {item.icon}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
