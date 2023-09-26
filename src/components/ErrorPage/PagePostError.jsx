@@ -5,7 +5,7 @@ const PagePostError = () => {
   
   
   return (
-    <div className='fixed z-[20] inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center' id="test" >
+    <div className="" >
         
     </div>
   )

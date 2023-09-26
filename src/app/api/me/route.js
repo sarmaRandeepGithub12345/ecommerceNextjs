@@ -1,6 +1,6 @@
 import { getDataFromToken } from "@/mdl/route";
 import { connectPostgress } from "@/utils/db";
-
+import { NextResponse } from "next/server";
 
 export const GET= async(request)=>{
 
