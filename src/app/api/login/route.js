@@ -16,7 +16,7 @@ export const POST =async(req)=>{
     //db 
      
     const result = await connectPostgress(text,params)
-    console.log(result)
+    //console.log(result)
     if(result.rows.length==0){
             
         return sendResponse(400,"No user Found",{},[])
