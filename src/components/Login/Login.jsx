@@ -70,7 +70,7 @@ const Login = () => {
         e.target.reset()
         //storing userData in local Storage
         setLocalItem("user",show.data)
-       
+        console.log(show.data)
         if(show.data.isseller===false){
           
           router?.push("/")
