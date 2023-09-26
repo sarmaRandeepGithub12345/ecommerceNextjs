@@ -43,7 +43,7 @@ export const POST =async(req)=>{
         
 
         const res =  sendResponse(200,"Welcome back",info,[])
-        res.cookies.set(process.env.token_name,tkn,
+        res.cookies.set("token",tkn,
         {
             httpOnly:true,
             path:"/"
