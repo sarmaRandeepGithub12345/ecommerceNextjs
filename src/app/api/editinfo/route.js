@@ -4,7 +4,7 @@ import { connectPostgress } from "@/utils/db";
 import { sendResponse } from "@/utils/response";
 
 export const PATCH = async (req) => {
-  console.log('hi')
+  
   const data = await req.formData()
   const opNum = data.get('opNum')
   // console.log(opNum)
@@ -35,13 +35,15 @@ export const PATCH = async (req) => {
   //   const newName = data.get('newName')
   //   text = "update users set name = $1 where id = $2 and email=$3 returning *";
   //   params = [newName, tokenInfo.id, tokenInfo.email];
-  // }else if(opNum==="3"){
-  //   //console.log('Hi')
-  //   const location = data.get('location')
-  //   //console.log(location)
-  //   text = "update users set location = $1 where id = $2 returning *";
-  //   params = [location, tokenInfo.id];
-  // }else if(opNum==="4"){
+  // }else 
+  if(opNum==="3"){
+    //console.log('Hi')
+    const location = data.get('location')
+    //console.log(location)
+    text = "update users set location = $1 where id = $2 returning *";
+    params = [location, tokenInfo.id];
+   }
+  //   else if(opNum==="4"){
   //   //description only allowed for sellers
   //   const description = data.get('description')
   //   text = "update users set description = $1 where id = $2 and email=$3 and isseller=$4 returning *";
@@ -49,8 +51,8 @@ export const PATCH = async (req) => {
   // }
   try {
     //console.log(text,params)
-    // const result = await connectPostgress(text, params);
-    // console.log(result.rows[0])
+    const result = await connectPostgress(text, params);
+    console.log(result.rows[0])
     return sendResponse(200, "Profile Information Updated Successfully", {}, []);
 
 
