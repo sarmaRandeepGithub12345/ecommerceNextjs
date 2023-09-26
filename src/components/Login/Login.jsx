@@ -12,7 +12,7 @@ import CenterPopUp from "../centerPopUp/CenterPopUp";
 import { setLocalItem } from "@/utils/dataSample";
 import useCustomHook from "@/hooks/useCustomHook";
 const Login = () => {
-  console.log(process.env.NEXT_PUBLIC_BUCKET_END)
+  
   const router = useRouter();
   //console.log(isLoading)
   const [selectedOption, setSelectedOption] = useState("buyer"); // Default selected option

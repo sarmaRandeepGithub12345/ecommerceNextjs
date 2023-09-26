@@ -14,8 +14,9 @@ export const POST =async(req)=>{
     const text =`select * from users where email = $1 and isseller = $2`
     const params = [email,isSeller];
     //db 
-    
+     
     const result = await connectPostgress(text,params)
+    console.log(result)
     if(result.rows.length==0){
             
         return sendResponse(400,"No user Found",{},[])
