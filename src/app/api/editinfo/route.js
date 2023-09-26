@@ -7,8 +7,8 @@ export const PATCH = async (req) => {
   console.log('hi')
   const data = await req.formData()
   const opNum = data.get('opNum')
-  console.log(opNum)
-  return sendResponse(200,"Done",{},[])
+  // console.log(opNum)
+  // return sendResponse(200,"Done",{},[])
   
   // opNum ===1 Change Display Picture
   // opNum ===2 Change Name
