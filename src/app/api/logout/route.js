@@ -4,8 +4,15 @@ import { NextResponse } from "next/server";
 
 export const GET = async(req)=>{
     try {
-        const res = sendResponse(200,"Logged Out",{},[])
-        console.log('Hi')
+        const res = NextResponse.json(
+            {
+              message:"Logged Out",
+              data:{},
+              errors:[]
+            },
+               {status:200}
+            ) 
+
         res.cookies.set(process.env.token_name,"",
         {
             httpOnly:true,
