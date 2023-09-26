@@ -7,7 +7,7 @@ export function middleware(request) {
 // 
   const isPublicPath = path === '/login' || path === '/register'
 
-  const token = request.cookies.get('Authtoken')?.value || ''
+  const token = request.cookies.get('token')?.value || ''
 
   if(isPublicPath && token){
     //console.log('Hi')
