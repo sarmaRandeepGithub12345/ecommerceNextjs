@@ -16,7 +16,7 @@ export const GET = async(req)=>{
         res.cookies.set(process.env.token_name,"",
         {
             httpOnly:true,
-            expires:new Date(0)
+            expires:new Date(-10)
         })
         return res
     } catch (error) {
