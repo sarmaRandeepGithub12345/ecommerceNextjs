@@ -52,7 +52,7 @@ export const PATCH = async (req) => {
   try {
     //console.log(text,params)
     const result = await connectPostgress(text, params);
-    console.log(result.rows[0])
+    const {password,...info} = result.rows[0]
     return sendResponse(200, "Profile Information Updated Successfully", {}, []);
 
 

@@ -33,17 +33,18 @@ export const POST =async(req)=>{
     try {
         //console.log(process.env.DATABASE_URL)
         
-        const data = {
-            id:result.rows[0].id,
-            name:result.rows[0].name,
-            email:result.rows[0].email,
-            img:result.rows[0].img,
-            desc:result.rows[0].description,
-            status:result.rows[0].isseller,
-            cart:result.rows[0].cart,
-            createdAt:result.rows[0].created_at,
-            location:result.rows[0].location
-        }
+        // const data = {
+        //     id:result.rows[0].id,
+        //     name:result.rows[0].name,
+        //     email:result.rows[0].email,
+        //     img:result.rows[0].img,
+        //     desc:result.rows[0].description,
+        //     status:result.rows[0].isseller,
+        //     cart:result.rows[0].cart,
+        //     createdAt:result.rows[0].created_at,
+        //     location:result.rows[0].location
+        // }
+        const {password,...info}= result.rows[0]
         //console.log(result.rows[0])
         const tokenData = {
             id:result.rows[0].id,
@@ -53,7 +54,7 @@ export const POST =async(req)=>{
         const tkn = jwt.sign(tokenData,process.env.JWT_SECRET,{expiresIn:"30d"})//await createJWT(data)
         //console.log(data)
 
-        const res =  sendResponse(200,"Welcome back",data,[])
+        const res =  sendResponse(200,"Welcome back",info,[])
         res.cookies.set(process.env.token_name,tkn,
         {
             httpOnly:true,

@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 export const GET = async(req)=>{
     try {
         const res = sendResponse(200,"Logged Out",{},[])
+        console.log('Hi')
         res.cookies.set(process.env.token_name,"",
         {
             httpOnly:true,
