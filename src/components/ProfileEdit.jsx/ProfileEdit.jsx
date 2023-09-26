@@ -277,7 +277,7 @@ const ProfileEdit = () => {
         {
           showDesc? <textarea name="" id="desc" className="h-[80px] w-[90%]  rounded-[5px]  resize-none p-2" placeholder="Type your new description here...." ></textarea>:
           <div className="w-[90%] p-3">
-        {userInfo?.desc}
+        {userInfo?.description}
       </div>
         }
       

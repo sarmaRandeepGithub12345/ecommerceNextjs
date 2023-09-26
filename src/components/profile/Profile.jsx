@@ -53,7 +53,7 @@ const Profile = () => {
         className={` w-[100%] flex flex-col justify-center items-center `}
       >
      
-        {userInfo?.status==='seller'?
+        {userInfo?.isseller==='seller'?
          <TabPanel />:
          <ProfileEdit/>  
       }
