@@ -83,7 +83,7 @@ const Navbar = () => {
       if (resp.status === 200) {
         
         console.log(show)
-        setLocalItem("userInfo", null);
+        setLocalItem("user", null);
       
         router.push("/login");
       }
