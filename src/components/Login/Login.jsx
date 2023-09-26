@@ -71,7 +71,7 @@ const Login = () => {
         //storing userData in local Storage
         setLocalItem("user",show.data)
        
-        if(selectedOption==="buyer"){
+        if(show.data.isseller===false){
           
           router?.push("/")
         //  console.log(show)
