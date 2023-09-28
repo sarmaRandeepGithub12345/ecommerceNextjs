@@ -14,7 +14,7 @@ require("aws-sdk/lib/maintenance_mode_message").suppress = true;
 
 
 export const uploadFunct = async (blobs, endpoint) => {
-  //console.log(process.env.NEXT_PUBLIC_ACCESS_KEY)
+  
   //console.log(file)
   //console.log(blobs)
   AWS.config.update({
