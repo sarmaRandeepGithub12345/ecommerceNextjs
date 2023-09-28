@@ -1,9 +1,10 @@
 import Landing from '@/components/LandingPage/Landing'
-import {cookies} from "next/headers"
+import MobileSearchBox from '@/components/MobileSearchBar/MobileSearchBox'
 const Page = () => {
-  console.log(cookies()) 
+  
   return (
     <>
+    <MobileSearchBox/>
     <Landing/>
     </>
   )

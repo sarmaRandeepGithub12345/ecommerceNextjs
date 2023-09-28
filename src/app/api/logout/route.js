@@ -12,7 +12,7 @@ export const GET = async(req)=>{
             },
                {status:200}
             ) 
-        res.cookies.set("token","",
+        res.cookies.set(process.env.token_name,"",
         {
             httpOnly:true,
             expires:new Date(-10)

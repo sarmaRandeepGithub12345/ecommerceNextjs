@@ -13,14 +13,14 @@ const Landing = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:800px)");
 
   return (
-    <div className={` w-[99vw]  `}>
-      <MobileSearchBox />
+    <>
+     
 
       <Carousel />
       <BestDeals heading="Best Deals of the day" />
       <BestDeals heading="Most Sold"/>
       
-    </div>
+    </>
   );
 };
 

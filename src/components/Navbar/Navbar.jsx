@@ -12,10 +12,16 @@ import { setLocalItem } from "@/utils/dataSample";
 import { logoutFunction } from "@/functions/apiFunction";
 import useCustomHook from "@/hooks/useCustomHook";
 import CenterPopUp from "../centerPopUp/CenterPopUp";
+import { useCookies } from "react-cookie";
 
 //import "./Navbar.scss"
 const Navbar = () => {
   const [isLoading, setisLoading] = useState(false);
+  const [cookies,setCookie,removeCookie]=useCookies()
+  useEffect(() => {
+    console.log('Cookies: ', cookies);
+  }, [cookies]);
+
 
   const user = true;
   const [active, setActive] = useState(false);

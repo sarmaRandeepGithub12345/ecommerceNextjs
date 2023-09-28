@@ -70,15 +70,15 @@ const Login = () => {
         e.target.reset()
         //storing userData in local Storage
         setLocalItem("user",show.data)
-        console.log(show.data)
+        setSelectedOption("buyer");
         if(show.data.isseller===false){
-          
-          router?.push("/")
+       
+          router.push("/")
         //  console.log(show)
         }else{
-          router?.push("/orders")
+          router.push("/orders")
         }
-        setSelectedOption("buyer");
+       
       } else if (resp.status === 400) {
         seterrorP({
           num: 2,
